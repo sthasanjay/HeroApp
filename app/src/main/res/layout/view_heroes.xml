@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+
+    >
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imgview"
+        android:layout_margin="10dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/logo"
+        />
+
+    <TextView
+        style="@style/TextandLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item's Name"
+        android:id="@+id/tvName"
+        android:textSize="20sp"
+        android:textColor="#0E0E0E"
+        android:text="gg"
+        android:layout_toEndOf="@+id/imgview"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/imgview" />
+
+
+
+    <TextView
+        style="@style/TextandLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item's Description"
+        android:id="@+id/tvDesc"
+        android:text="Des"
+        android:textSize="20sp"
+        android:textColor="#0E0E0E"
+        android:layout_toEndOf="@+id/imgview"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="55dp"
+        android:layout_toRightOf="@+id/imgview" />
+
+
+</RelativeLayout>

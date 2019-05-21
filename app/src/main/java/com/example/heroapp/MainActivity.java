@@ -31,12 +31,11 @@ import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+
 
 public class MainActivity extends AppCompatActivity {
     private EditText etName,etDes;
-    private Button btnSave;
+    private Button btnSave,btnView;
     private ImageView imgProfile;
     private String imagePath,imageName;
 
@@ -48,13 +47,24 @@ public class MainActivity extends AppCompatActivity {
         etName=findViewById(R.id.etName);
         etDes =findViewById(R.id.etDes);
         btnSave =findViewById(R.id.btnSave);
+        btnView =findViewById(R.id.btnView);
         imgProfile =findViewById(R.id.imgProfile);
+
+        btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,Display_hero.class);
+                startActivity(intent);
+            }
+        });
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Save();
             }
         });
+
+
 
         imgProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,9 +166,11 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if(!response.isSuccessful()){
                     Toast.makeText(MainActivity.this,"Code "+response.code(),Toast.LENGTH_LONG ).show();
+
                 }
                 Toast.makeText(MainActivity.this,"Sucesfully Added ",Toast.LENGTH_LONG ).show();
-
+                Intent intent = new Intent(MainActivity.this,Display_hero.class);
+                startActivity(intent);
             }
 
             @Override

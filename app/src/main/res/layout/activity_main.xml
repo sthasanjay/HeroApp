@@ -13,6 +13,7 @@
         android:layout_height="300dp"
         android:scaleType="fitCenter"
         android:layout_gravity="center"
+        android:src="@drawable/logo"
         />
 
     <EditText
@@ -42,6 +43,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Save"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20sp"
+
+        />
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="View Heros"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginTop="20sp"
