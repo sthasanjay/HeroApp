@@ -2,6 +2,7 @@ package com.example.heroapp.HeroesApi;
 
 import com.example.heroapp.Model.Heroes;
 import com.example.heroapp.Model.ImageResponse;
+import com.example.heroapp.Model.LoginSignupResponse;
 
 import java.util.List;
 import java.util.Map;
@@ -36,5 +37,11 @@ public interface HeroesAPI {
     @FormUrlEncoded
     @POST("heroes")
     Call<Void> addMapHero(@FieldMap Map<String, String> map);
+
+
+    @FormUrlEncoded
+    @POST("users/login")
+
+    Call<LoginSignupResponse> checkUser(@Field("username")String username,@Field("password") String password);
 
 }
